@@ -1,0 +1,2 @@
+include ':app', ':funwithflags', ':funwithflags-compiler'
+rootProject.name='FunWithFlags'
