@@ -51,6 +51,11 @@ public class Model implements Contract.Model {
     }
 
     @Override
+    public Map<Long, Element> getAllFlags() {
+        return flagsStorage;
+    }
+
+    @Override
     public void storeFlagWithId(Element flag, long id) {
         flagsStorage.put(id, flag);
     }

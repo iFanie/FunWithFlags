@@ -1,6 +1,7 @@
 package dev.fanie.funwithflagscompiler.component;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
@@ -51,7 +52,8 @@ public class Presenter implements Contract.Presenter {
 
     @Override
     public void onPropertiesReceived(TypeElement propertiesClass, Element[] properties) {
-        final PropertiesImplementation propertiesImplementation = getPropertiesImplementationFrom(propertiesClass, properties);
+        final Map<Long, Element> storedFlags = mModel.getAllFlags();
+        final PropertiesImplementation propertiesImplementation = getPropertiesImplementationFrom(propertiesClass, properties, storedFlags);
         mModel.storePropertiesImplementation(propertiesImplementation);
     }
 

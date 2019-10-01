@@ -1,6 +1,7 @@
 package dev.fanie.funwithflagscompiler;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Element;
@@ -15,6 +16,8 @@ public interface Contract {
         void requestFlags();
 
         Element getFlagById(long id);
+
+        Map<Long, Element> getAllFlags();
 
         void storeFlagWithId(Element flag, long id);
 
