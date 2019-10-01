@@ -10,7 +10,7 @@ public interface FunWithFlags {
     }
 
     @interface Property {
-        long[] ids();
+        long[] ids() default {};
 
         boolean fallback() default false;
     }
