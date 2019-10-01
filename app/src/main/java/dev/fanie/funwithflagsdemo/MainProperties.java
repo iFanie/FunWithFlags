@@ -7,4 +7,7 @@ public interface MainProperties {
 
     @FunWithFlags.Property(ids = {1L, 2L})
     boolean isEnabled();
+
+    @FunWithFlags.Property(fallback = false)
+    boolean isLive();
 }
